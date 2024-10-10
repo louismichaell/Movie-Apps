@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailMovieActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_detail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/darkblue"
+        android:elevation="4dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageView
+            android:id="@+id/icon_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:clickable="true"
+            android:contentDescription="@string/back"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrowback"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/tvToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detailMovie"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:textSize="20sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:padding="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/ivBackgroundDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_marginTop="0dp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPosterDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="-90dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivBackgroundDetail">
+
+                <ImageView
+                    android:id="@+id/ivPosterDetail"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name"
+                    tools:src="@tools:sample/avatars" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvTitleDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginEnd="8dp"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cvPosterDetail"
+                app:layout_constraintTop_toBottomOf="@id/ivBackgroundDetail"
+                tools:text="Movie Title" />
+
+            <TextView
+                android:id="@+id/tvOverviewDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvTitleDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleDetail"
+                tools:text="This is a brief overview of the movie." />
+
+            <ImageView
+                android:id="@+id/ivReleaseDateIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/icon"
+                app:layout_constraintStart_toStartOf="@id/tvTitleDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvOverviewDetail"
+                app:srcCompat="@drawable/ic_date" />
+
+            <TextView
+                android:id="@+id/tvReleaseDateDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                app:layout_constraintStart_toEndOf="@id/ivReleaseDateIcon"
+                app:layout_constraintTop_toBottomOf="@id/tvOverviewDetail"
+                tools:text="Release Date" />
+
+            <ImageView
+                android:id="@+id/ivPopularityIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/icon"
+                app:layout_constraintStart_toStartOf="@id/tvTitleDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvReleaseDateDetail"
+                app:srcCompat="@drawable/ic_views" />
+
+            <TextView
+                android:id="@+id/tvPopularityDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                app:layout_constraintStart_toEndOf="@id/ivPopularityIcon"
+                app:layout_constraintTop_toBottomOf="@id/tvReleaseDateDetail"
+                tools:text="Popularity" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_detail"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/ivVoteAverage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/icon"
+                app:layout_constraintStart_toStartOf="@id/tvTitleDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvPopularityDetail"
+                app:srcCompat="@drawable/ic_starrate" />
+
+            <TextView
+                android:id="@+id/tvVoteAverage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                app:layout_constraintStart_toEndOf="@id/ivVoteAverage"
+                app:layout_constraintTop_toBottomOf="@id/tvPopularityDetail"
+                tools:text="Rating" />
+
+            <ImageView
+                android:id="@+id/ivLanguage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/icon"
+                app:layout_constraintStart_toStartOf="@id/tvTitleDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvVoteAverage"
+                app:srcCompat="@drawable/ic_language" />
+
+            <TextView
+                android:id="@+id/tvLanguageDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                app:layout_constraintStart_toEndOf="@id/ivLanguage"
+                app:layout_constraintTop_toBottomOf="@id/tvVoteAverage"
+                tools:text="Language" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="17dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_favoriteborder_black"
+        android:tint="@android:color/black"
+        app:backgroundTint="@color/white"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

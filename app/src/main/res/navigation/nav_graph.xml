@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.dicoding.movieexpert.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_detail_activity"
+            app:destination="@id/detail_activity">
+            <argument
+                android:name="movieId"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_favorite2"
+            app:destination="@id/navigation_favorite" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.dicoding.favorite.FavoriteFragment"
+        android:label="@string/favorite"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_navigation_favorite_to_detail_activity"
+            app:destination="@id/detail_activity" />
+        <action
+            android:id="@+id/action_navigation_favorite_to_navigation_listMovie"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.dicoding.movieexpert.ui.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <activity
+        android:id="@+id/detail_activity"
+        android:name="com.dicoding.movieexpert.ui.detail.DetailMovieActivity"
+        android:label="activity_detail"
+        tools:layout="@layout/activity_detail_movie">
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+    </activity>
+</navigation>

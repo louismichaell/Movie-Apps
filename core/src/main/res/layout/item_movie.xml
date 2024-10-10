@@ -1,0 +1,130 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivPoster"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingTop="9dp"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toEndOf="@id/ivPoster"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="18sp"
+            tools:text="Joker" />
+
+        <TextView
+            android:id="@+id/tvOverview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:ellipsize="end"
+            android:paddingTop="4dp"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintEnd_toEndOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            android:textSize="14sp"
+            tools:text="Overview" />
+
+        <ImageView
+            android:id="@+id/ivReleaseDateIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_date"
+            app:tint="@color/icon"
+            app:layout_constraintStart_toStartOf="@id/tvOverview"
+            app:layout_constraintTop_toBottomOf="@id/tvOverview" />
+
+        <TextView
+            android:id="@+id/tvReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toEndOf="@id/ivReleaseDateIcon"
+            app:layout_constraintTop_toTopOf="@id/ivReleaseDateIcon"
+            android:textSize="14sp"
+            tools:text="Release Date" />
+
+        <ImageView
+            android:id="@+id/ivPopularityIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="@string/app_name"
+            app:tint="@color/icon"
+            app:layout_constraintStart_toStartOf="@+id/ivReleaseDateIcon"
+            app:layout_constraintTop_toBottomOf="@+id/ivReleaseDateIcon"
+            android:src="@drawable/ic_views" />
+
+        <TextView
+            android:id="@+id/tvPopularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toEndOf="@id/ivPopularityIcon"
+            app:layout_constraintTop_toTopOf="@id/ivPopularityIcon"
+            android:textSize="14sp"
+            tools:text="Popularity" />
+
+        <ImageView
+            android:id="@+id/ivLanguageIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="@string/app_name"
+            app:tint="@color/icon"
+            app:layout_constraintStart_toStartOf="@+id/ivPopularityIcon"
+            app:layout_constraintTop_toBottomOf="@+id/ivPopularityIcon"
+            android:src="@drawable/ic_language" />
+
+        <TextView
+            android:id="@+id/tvLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toEndOf="@id/ivLanguageIcon"
+            app:layout_constraintTop_toTopOf="@id/ivLanguageIcon"
+            android:textSize="14sp"
+            tools:text="Language" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
