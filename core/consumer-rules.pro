@@ -125,11 +125,7 @@
 # Keep DI modules and their providers
 -keep class  com.dicoding.core.di.** { *; }
 -keep class  com.dicoding.core.di.DatabaseModule { *; }
--keep class  com.dicoding.core.di.DatabaseModule_ProvideDatabaseFactory { *; }
--keep class  com.dicoding.core.di.DatabaseModule_ProvideMovieDaoFactory { *; }
 -keep class  com.dicoding.core.di.NetworkModule { *; }
--keep class  com.dicoding.core.di.NetworkModule_ProvideApiServiceFactory { *; }
--keep class  com.dicoding.core.di.NetworkModule_ProvideOkHttpClientFactory { *; }
 
 # Keep domain classes and their members
 -keep class  com.dicoding.core.domain.model.Movie { *; }

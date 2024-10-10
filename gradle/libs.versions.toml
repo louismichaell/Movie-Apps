@@ -15,7 +15,7 @@ navigationFragmentKtx = "2.7.7"
 navigationUiKtx = "2.7.7"
 ksp = "1.9.0-1.0.13"
 nav = "2.7.7"
-jsoup = "1.18.1"
+mockito = "5.2.0"
 androidDatabaseSqlcipher = "4.5.4"
 leakcanaryAndroid = "2.14"
 sqliteKtx = "2.4.0"
@@ -31,6 +31,7 @@ hiltPlugin ="2.51.1"
 preferenceKtx = "1.2.1"
 room = "2.6.1"
 hiltAndroidGradlePlugin = "2.51.1"
+kotlinx-coroutines = "1.6.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -49,7 +50,9 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 androidx-sqlite-ktx = { module = "androidx.sqlite:sqlite-ktx", version.ref = "sqliteKtx" }
 android-database-sqlcipher = { module = "net.zetetic:android-database-sqlcipher", version.ref = "androidDatabaseSqlcipher" }
 leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanaryAndroid" }
-
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockito" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
 # Retrofit
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 gson-converter-factory = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }

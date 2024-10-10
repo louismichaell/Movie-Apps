@@ -73,4 +73,7 @@ dependencies {
     ksp(libs.hilt.compiler)
     implementation(libs.android.database.sqlcipher)
     implementation(libs.androidx.sqlite.ktx)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.inline)
+    testImplementation(libs.kotlinx.coroutines.test)
 }

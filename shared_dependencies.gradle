@@ -22,4 +22,7 @@ dependencies {
     ksp(libs.hilt.compiler)
     implementation(libs.androidx.multidex)
     debugImplementation(libs.leakcanary.android)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.inline)
+    testImplementation(libs.kotlinx.coroutines.test)
 }
