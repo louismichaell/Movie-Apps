@@ -4,5 +4,5 @@
 ## Disclaimer ⚠️
 This repository is created for sharing and educational purposes only. Plagiarism is unacceptable and is not my responsibility as the author.
 
-[![louismichaell](https://circleci.com/gh/louismichaell/MovieExpertDicoding.svg?style=svg)](https://circleci.com/gh/louismichaell/MovieExpertDicoding)
+[![louismichaell](https://circleci.com/gh/louismichaell/Movie-Apps.svg?style=svg)](https://circleci.com/gh/louismichaell/Movie-Apps)
 
